@@ -9,21 +9,16 @@ CHUNK = 1024
 FORMAT = pyaudio.paInt16
 """The data type used to record audio. See ``pyaudio`` for constants."""
 CHANNELS = 1
-"""The number of channels to record."""
-RATE = 44100
-"""The sample rate."""
+"""The number of channels to record.""" 
+RATE = 44100 
+"""The sample rate.""" 
 RECORD_SECONDS = 10
 """Number of seconds to record."""
 SAVE_DIRECTORY = "test/"
 """Directory used to save audio when using :func:`gen_many_tests`."""
 
-
+# NOTE: Record 10 seconds of audio and optionally save it to a file
 def record_audio(filename=None):
-    """ Record 10 seconds of audio and optionally save it to a file
-
-    :param filename: The path to save the audio (optional).
-    :returns: The audio stream with parameters defined in this module.
-    """
     p = pyaudio.PyAudio()
 
     stream = p.open(format=FORMAT,
@@ -59,18 +54,15 @@ def record_audio(filename=None):
 
     return np.hstack(frames)
 
+# NOTE: Play audio from a WAV file
 def play_audio(filename):
-    """ Play audio from a WAV file
-
-    :param filename: The path to the WAV file to play.
-    """
     os.system("start " + filename)  # For Windows, opens the default player for WAV files
     # For Linux or MacOS, you may need to use a different command or player
 
 if __name__ == "__main__":
     # Set the filename to save the recorded audio
     current_directory = os.getcwd()
-    filename = os.path.join(current_directory, "recorded_audio3.wav")
+    filename = os.path.join(current_directory, "../../database/songs/recorded_audio3.wav")
     
     print(filename)
     
@@ -81,4 +73,4 @@ if __name__ == "__main__":
     print("Recorded audio saved to:", filename)
 
     # Play the recorded audio
-    play_audio(filename)
+    # play_audio(filename)
