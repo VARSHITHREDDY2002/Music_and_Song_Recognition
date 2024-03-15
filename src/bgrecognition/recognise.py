@@ -71,6 +71,6 @@ def song_in_db(filename):
         return c.fetchone() is not None
 
 if __name__ == "__main__":
-    path = "../../data-sets/songs/songsrecorded_audio3.wav"
+    path = "../../data-sets/songs/recorded_audio4.wav"
     info = recognise_song(path)
     print("matched info:",info)

@@ -62,7 +62,7 @@ def play_audio(filename):
 if __name__ == "__main__":
     # Set the filename to save the recorded audio
     current_directory = os.getcwd()
-    filename = os.path.join(current_directory, "../../database/songs/recorded_audio3.wav")
+    filename = os.path.join(current_directory, "../../data-sets/songs/recorded_audio4.wav")
     
     print(filename)
     
