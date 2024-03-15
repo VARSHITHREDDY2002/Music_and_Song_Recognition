@@ -33,7 +33,5 @@ def get_files_info(folder_path):
     return files_info
 
 if __name__ == "__main__":
-    folder_path = "/home/rohithreddy/Desktop/songs"
+    folder_path = "/home/ebenezerrahul/college/Music_and_Song_Recognition/data-sets/songs/"
     files_info = get_files_info(folder_path)
-    # for filename, artist, album, title in files_info:
-    #     print(f"File: {filename}, Artist: {artist}, Album: {album}, Title: {title}")
