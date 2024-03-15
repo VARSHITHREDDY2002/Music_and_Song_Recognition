@@ -27,7 +27,7 @@ def register_song(filename):
 # NOTE: it uses the offsets and computes the starttime - sample time and then put them into bins and the bin containing the largest number of items is the score
 def score_match(offsets):
     # Use bins spaced 0.5 seconds apart
-    binwidth = 0.5
+    binwidth = 0.1
     tks = list(map(lambda x: x[0] - x[1], offsets))
 
     hist, _ = np.histogram(tks,
